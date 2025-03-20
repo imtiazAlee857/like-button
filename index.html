@@ -61,18 +61,25 @@ scale=1.0">
             font-size: 16px;
             font-weight: bold;
             text-align: center;
-            box-shadow: 4px 4px 8px rgba(0, 
+            box-shadow: 5px 5px 10px rgba(0, 
 
-0, 0, 0.3);
-            transition: all 0.3s ease-in-out;
+0, 0, 0.3),
+                        inset 2px 2px 5px 
+
+rgba(255, 255, 255, 0.2);
+            transition: all 0.2s ease-in-out;
             width: 100%;
-            position: relative;
         }
         .button:hover {
-            transform: scale(1.05);
-            box-shadow: 6px 6px 12px rgba
+            background: linear-gradient
 
-(255, 140, 0, 0.5);
+(145deg, #2a5298, #1e3c72);
+            box-shadow: 3px 3px 8px rgba(0, 
+
+0, 0, 0.5),
+                        inset -2px -2px 5px 
+
+rgba(255, 255, 255, 0.2);
         }
         .dropdown {
             display: none;
@@ -180,11 +187,13 @@ document.getElementById("dropdown");
             let dropdownButtons = 
 
 document.getElementById("dropdown-buttons");
+
             mainContainer.style.display = 
 
 "none";
             dropdown.style.display = "flex";
             dropdownButtons.innerHTML = "";
+
             if (category === "WhatsApp 
 
 Group") {
@@ -211,6 +220,7 @@ esgw";
                 dropdownButtons.appendChild
 
 (carButton);
+
                 let hyderabadUpdateButton = 
 
 document.createElement("button");
@@ -239,6 +249,7 @@ status'>Online</span>";
 
 (hyderabadUpdateButton);
             }
+
             for (let i = 1; i <= 30; i++) {
                 let button = 
 
@@ -257,6 +268,7 @@ dropdown-item";
 (button);
             }
         }
+
         function goBack() {
             document.getElementById("main-
 
@@ -265,6 +277,7 @@ container").style.display = "flex";
 
 ("dropdown").style.display = "none";
         }
+
         function filterButtons() {
             let searchInput = 
 
@@ -274,6 +287,7 @@ box").value.toLowerCase();
             let buttons = 
 
 document.querySelectorAll(".dropdown-item");
+
             buttons.forEach(button => {
                 button.style.display = 
 
