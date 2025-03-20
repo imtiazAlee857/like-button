@@ -1,312 +1,466 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" 
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     
 
-content="width=device-width, initial-
+<meta charset="UTF-8">
+     <meta 
 
-scale=1.0">
-    <title>Interactive Buttons</title>
-    <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            background-color: #f4f4f4;
-            font-family: Arial, sans-serif;
-            padding: 20px;
-            margin: 0;
-        }
-        .marquee {
-            width: 100%;
+name="viewport" content="width=device-width, 
+
+initial-scale=1.0">
+     <title>Interactive 
+
+Buttons</title>
+     <style>
+         body {
+    
+
+         display: flex;
+             flex-
+
+direction: column;
+             align-items: 
+
+center;
+             justify-content: center;
+  
+
+           min-height: 100vh;
+             
+
+background-color: #f4f4f4;
+             font-
+
+family: Arial, sans-serif;
+             
+
+padding: 20px;
+             margin: 0;
+         
+
+}
+         .marquee {
+             width: 100%;
+ 
+
             text-align: center;
-            background: #ff0000;
-            color: white;
-            padding: 10px 0;
-            position: fixed;
-            top: 0;
-            font-weight: bold;
-            box-shadow: 0 4px 6px rgba(0, 0, 
+             
 
-0, 0.2);
-            text-transform: uppercase;
-            font-size: 16px;
-        }
-        .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-            margin-top: 60px;
-        }
-        .main-buttons {
-            display: flex;
-            flex-direction: column;
-            width: 90%;
-            max-width: 400px;
-        }
-        .button {
-            background: linear-gradient
+background: #ff0000;
+             color: 
 
-(145deg, #1e3c72, #2a5298);
-            color: white;
-            border: none;
-            padding: 15px;
-            margin: 5px 0;
-            border-radius: 10px;
-            cursor: pointer;
-            font-size: 16px;
-            font-weight: bold;
-            text-align: center;
+white;
+             padding: 10px 0;
+           
+
+  position: fixed;
+             top: 0;
+        
+
+     font-weight: bold;
+             box-
+
+shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+         
+
+    text-transform: uppercase;
+             
+
+font-size: 16px;
+         }
+         .container 
+
+{
+             display: flex;
+             
+
+flex-direction: column;
+             align-
+
+items: center;
+             width: 100%;
+       
+
+      margin-top: 60px;
+         }
+         
+
+.main-buttons {
+             display: flex;
+    
+
+         flex-direction: column;
+             
+
+width: 90%;
+             max-width: 400px;
+     
+
+    }
+         .button {
+             
+
+background: linear-gradient(145deg, #1e3c72, 
+
+#2a5298);
+             color: white;
+           
+
+  border: none;
+             padding: 15px;
+    
+
+         margin: 5px 0;
+             border-
+
+radius: 10px;
+             cursor: pointer;
+    
+
+         font-size: 16px;
+             font-
+
+weight: bold;
+             text-align: center;
+ 
+
             box-shadow: 4px 4px 8px rgba(0, 
 
 0, 0, 0.2);
-            transition: all 0.2s ease-in-out;
-            width: 100%;
-        }
-        .button:hover {
-            background: linear-gradient
+             transition: all 0.2s 
 
-(145deg, #2a5298, #1e3c72);
-            transform: scale(1.05);
-        }
-        .dropdown {
-            display: none;
-            flex-direction: column;
-            width: 90%;
-            max-width: 400px;
-            max-height: 400px;
-            overflow-y: auto;
-            border: 1px solid #ccc;
-            padding: 10px;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 4px 4px 8px rgba(0, 
+ease-in-out;
+             width: 100%;
+         
 
-0, 0, 0.2);
-        }
-        .search-container {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 10px;
-            width: 100%;
-        }
-        .search-box {
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 16px;
-            width: 100%;
-        }
-        .back-button {
-            background: #ff0000;
-            color: white;
-            border: none;
-            padding: 10px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 14px;
-        }
-        .online-status {
-            font-size: 14px;
-            font-weight: bold;
-            margin-left: 5px;
-            color: blue;
-        }
-    </style>
-</head>
-<body>
-    <div class="marquee">Aapki website 
+}
+         .button:hover {
+             
 
-promote hogi</div>
-    <div class="container" id="main-
+background: linear-gradient(145deg, #2a5298, 
 
-container">
-        <div class="main-buttons">
-            <button class="button" 
+#1e3c72);
+         }
+         .dropdown {
+       
 
-onclick="toggleDropdown
+      display: none;
+             flex-
+
+direction: column;
+             width: 90%;
+    
+
+         max-width: 400px;
+             max-
+
+height: 400px;
+             overflow-y: auto;
+  
+
+           border: 1px solid #ccc;
+            
+
+ padding: 10px;
+             background: 
+
+white;
+             border-radius: 10px;
+       
+
+      box-shadow: 4px 4px 8px rgba(0, 0, 0, 
+
+0.2);
+         }
+         .search-container {
+   
+
+          display: flex;
+             align-
+
+items: center;
+             justify-content: 
+
+space-between;
+             margin-bottom: 
+
+10px;
+             width: 100%;
+         }
+      
+
+   .search-box {
+             padding: 10px;
+   
+
+          border: 1px solid #ccc;
+             
+
+border-radius: 5px;
+             font-size: 
+
+16px;
+             width: 100%;
+         }
+      
+
+   .back-button {
+             background: 
+
+#ff0000;
+             color: white;
+            
+
+ border: none;
+             padding: 10px;
+     
+
+        border-radius: 5px;
+             
+
+cursor: pointer;
+             font-size: 14px;
+ 
+
+        }
+     </style>
+ </head>
+ <body>
+     
+
+<div class="marquee">Aapki website promote 
+
+hogi</div>
+     <div class="container" 
+
+id="main-container">
+         <div 
+
+class="main-buttons">
+             <button 
+
+class="button" onclick="toggleDropdown
 
 ('Facebook')">Facebook</button>
-            <button class="button" 
+             
+
+<button class="button" 
 
 onclick="toggleDropdown
 
 ('YouTube')">YouTube</button>
-            <button class="button" 
+             
+
+<button class="button" 
 
 onclick="toggleDropdown
 
 ('TikTok')">TikTok</button>
-            <button class="button" 
+             
+
+<button class="button" 
 
 onclick="toggleDropdown('Facebook 
 
 Group')">Facebook Group</button>
-            <button class="button" 
+             
+
+<button class="button" 
 
 onclick="toggleDropdown('WhatsApp 
 
 Group')">WhatsApp Group</button>
-            <button class="button" 
+             
+
+<button class="button" 
 
 onclick="toggleDropdown
 
 ('Sub4Sub')">Sub4Sub</button>
-        </div>
-    </div>
-    <div class="dropdown" id="dropdown">
-        <div class="search-container">
-            <button class="back-button" 
+         </div>
+  
 
-onclick="goBack()">Back</button>
-            <input type="text" 
+   </div>
+     <div class="dropdown" 
 
-class="search-box" id="search-box" 
+id="dropdown">
+         <div class="search-
 
-onkeyup="filterButtons()" 
+container">
+             <button class="back-
+
+button" onclick="goBack()">Back</button>
+      
+
+       <input type="text" class="search-box" 
+
+id="search-box" onkeyup="filterButtons()" 
 
 placeholder="Search...">
-        </div>
-        <div id="dropdown-buttons"></div>
-    </div>
-    
-    <script>
-        function toggleDropdown(category) {
-            let mainContainer = 
+         </div>
+       
 
-document.getElementById("main-container");
-            let dropdown = 
+  <div id="dropdown-buttons"></div>
+     
 
-document.getElementById("dropdown");
-            let dropdownButtons = 
+</div>
+     <script>
+         function 
+
+toggleDropdown(category) {
+             let 
+
+mainContainer = document.getElementById
+
+("main-container");
+             let dropdown 
+
+= document.getElementById("dropdown");
+        
+
+     let dropdownButtons = 
 
 document.getElementById("dropdown-buttons");
+ 
+ 
 
             mainContainer.style.display = 
 
 "none";
-            dropdown.style.display = "flex";
-            dropdownButtons.innerHTML = "";
+             dropdown.style.display = 
 
-            if (category === "WhatsApp 
+"flex";
+             dropdownButtons.innerHTML 
+
+= "";
+ 
+             if (category === "WhatsApp 
 
 Group") {
-                let carButton = 
+                 let carButton = 
 
 document.createElement("button");
-                carButton.className = "button 
+             
 
-dropdown-item";
-                carButton.innerHTML = "Cars 
+    carButton.className = "button dropdown-
 
-Hyderabad <span class='online-
+item";
+                 carButton.textContent 
 
-status'>Online</span>";
-                carButton.onclick = function
+= "Cars Hyderabad";
+                 
 
-() {
-                    window.location.href = 
+carButton.onclick = function() {
+              
+
+       window.location.href = 
 
 "https://chat.whatsapp.com/HZXBdKnRMq48HXh80v
 
 esgw";
-                };
-                dropdownButtons.appendChild
+                 };
+                 
 
-(carButton);
+dropdownButtons.appendChild(carButton);
+       
 
-                let hyderabadUpdateButton = 
+      }
+ 
+             for (let i = 1; i <= 30; 
 
-document.createElement("button");
-                
-
-hyderabadUpdateButton.className = "button 
-
-dropdown-item";
-                
-
-hyderabadUpdateButton.innerHTML = "Hyderabad 
-
-Update <span class='online-
-
-status'>Online</span>";
-                hyderabadUpdateButton.onclick 
-
-= function() {
-                    window.location.href = 
-
-"https://chat.whatsapp.com/FiJu2KPhmSM4qOayvz
-
-87sJ";
-                };
-                dropdownButtons.appendChild
-
-(hyderabadUpdateButton);
-            }
-
-            for (let i = 1; i <= 30; i++) {
-                let button = 
+i++) {
+                 let button = 
 
 document.createElement("button");
-                button.className = "button 
+             
 
-dropdown-item";
-                button.textContent = category 
+    button.className = "button dropdown-
 
-+ " " + i;
-                button.onclick = function() {
-                    highlightItem(this);
-                };
-                dropdownButtons.appendChild
+item";
+                 button.textContent = 
+
+category + " " + i;
+                 
+
+button.onclick = function() {
+                 
+
+    highlightItem(this);
+                 };
+   
+
+              dropdownButtons.appendChild
 
 (button);
-            }
-        }
+             }
+         }
+ 
+         
 
-        function goBack() {
-            document.getElementById("main-
+function goBack() {
+             
+
+document.getElementById("main-
 
 container").style.display = "flex";
-            document.getElementById
+           
+
+  document.getElementById
 
 ("dropdown").style.display = "none";
-        }
+         
 
-        function filterButtons() {
-            let searchInput = 
+}
+ 
+         function filterButtons() {
+         
+
+    let searchInput = 
 
 document.getElementById("search-
 
 box").value.toLowerCase();
-            let buttons = 
+             let 
 
-document.querySelectorAll(".dropdown-item");
+buttons = document.querySelectorAll
 
-            buttons.forEach(button => {
-                button.style.display = 
+(".dropdown-item");
+ 
+             
+
+buttons.forEach(button => {
+                 
+
+button.style.display = 
 
 button.textContent.toLowerCase().includes
 
 (searchInput) ? "block" : "none";
-            });
-        }
+             
 
-        function highlightItem(button) {
-            let buttons = 
+});
+         }
+ 
+         function 
 
-document.querySelectorAll(".dropdown-item");
-            buttons.forEach(btn => 
+highlightItem(button) {
+             let 
 
-btn.classList.remove("highlight"));
-            button.classList.add
+buttons = document.querySelectorAll
 
-("highlight");
-        }
-    </script>
-</body>
-</html>
+(".dropdown-item");
+             
+
+buttons.forEach(btn => btn.classList.remove
+
+("highlight"));
+             
+
+button.classList.add("highlight");
+         }
+  
+
+   </script>
+ </body>
+ </html>
