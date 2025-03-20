@@ -2,7 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" 
+
+content="width=device-width, initial-
+
+scale=1.0">
     <title>Interactive Buttons</title>
     <style>
         body {
@@ -25,7 +29,9 @@
             position: fixed;
             top: 0;
             font-weight: bold;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 6px rgba(0, 0, 
+
+0, 0.2);
             text-transform: uppercase;
             font-size: 16px;
         }
@@ -43,7 +49,9 @@
             max-width: 400px;
         }
         .button {
-            background: linear-gradient(145deg, #1e3c72, #2a5298);
+            background: linear-gradient
+
+(145deg, #1e3c72, #2a5298);
             color: white;
             border: none;
             padding: 15px;
@@ -53,12 +61,18 @@
             font-size: 16px;
             font-weight: bold;
             text-align: center;
-            box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
-            transition: all 0.2s ease-in-out;
+            box-shadow: 4px 4px 8px rgba(0, 
+
+0, 0, 0.3);
+            transition: all 0.3s ease-in-out;
             width: 100%;
+            position: relative;
         }
         .button:hover {
-            background: linear-gradient(145deg, #2a5298, #1e3c72);
+            transform: scale(1.05);
+            box-shadow: 6px 6px 12px rgba
+
+(255, 140, 0, 0.5);
         }
         .dropdown {
             display: none;
@@ -71,7 +85,9 @@
             padding: 10px;
             background: white;
             border-radius: 10px;
-            box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+            box-shadow: 4px 4px 8px rgba(0, 
+
+0, 0, 0.2);
         }
         .search-container {
             display: flex;
@@ -96,92 +112,175 @@
             cursor: pointer;
             font-size: 14px;
         }
-        .online-status {
-            font-size: 14px;
-            font-weight: bold;
-            margin-left: 5px;
-            color: blue;
-        }
     </style>
 </head>
 <body>
-    <div class="marquee">Aapki website promote hogi</div>
-    <div class="container" id="main-container">
+    <div class="marquee">Aapki website 
+
+promote hogi</div>
+    <div class="container" id="main-
+
+container">
         <div class="main-buttons">
-            <button class="button" onclick="toggleDropdown('Facebook')">Facebook</button>
-            <button class="button" onclick="toggleDropdown('YouTube')">YouTube</button>
-            <button class="button" onclick="toggleDropdown('TikTok')">TikTok</button>
-            <button class="button" onclick="toggleDropdown('Facebook Group')">Facebook Group</button>
-            <button class="button" onclick="toggleDropdown('WhatsApp Group')">WhatsApp Group</button>
-            <button class="button" onclick="toggleDropdown('Sub4Sub')">Sub4Sub</button>
+            <button class="button" 
+
+onclick="toggleDropdown
+
+('Facebook')">Facebook</button>
+            <button class="button" 
+
+onclick="toggleDropdown
+
+('YouTube')">YouTube</button>
+            <button class="button" 
+
+onclick="toggleDropdown
+
+('TikTok')">TikTok</button>
+            <button class="button" 
+
+onclick="toggleDropdown('Facebook 
+
+Group')">Facebook Group</button>
+            <button class="button" 
+
+onclick="toggleDropdown('WhatsApp 
+
+Group')">WhatsApp Group</button>
+            <button class="button" 
+
+onclick="toggleDropdown
+
+('Sub4Sub')">Sub4Sub</button>
         </div>
     </div>
     <div class="dropdown" id="dropdown">
         <div class="search-container">
-            <button class="back-button" onclick="goBack()">Back</button>
-            <input type="text" class="search-box" id="search-box" onkeyup="filterButtons()" placeholder="Search...">
+            <button class="back-button" 
+
+onclick="goBack()">Back</button>
+            <input type="text" 
+
+class="search-box" id="search-box" 
+
+onkeyup="filterButtons()" 
+
+placeholder="Search...">
         </div>
         <div id="dropdown-buttons"></div>
     </div>
     <script>
         function toggleDropdown(category) {
-            let mainContainer = document.getElementById("main-container");
-            let dropdown = document.getElementById("dropdown");
-            let dropdownButtons = document.getElementById("dropdown-buttons");
+            let mainContainer = 
 
-            mainContainer.style.display = "none";
+document.getElementById("main-container");
+            let dropdown = 
+
+document.getElementById("dropdown");
+            let dropdownButtons = 
+
+document.getElementById("dropdown-buttons");
+            mainContainer.style.display = 
+
+"none";
             dropdown.style.display = "flex";
             dropdownButtons.innerHTML = "";
+            if (category === "WhatsApp 
 
-            if (category === "WhatsApp Group") {
-                // Cars Hyderabad Button with "Online" Text
-                let carButton = document.createElement("button");
-                carButton.className = "button dropdown-item";
-                carButton.innerHTML = "Cars Hyderabad <span class='online-status'>Online</span>";
-                carButton.onclick = function() {
-                    window.location.href = "https://chat.whatsapp.com/HZXBdKnRMq48HXh80vesgw";
-                };
-                dropdownButtons.appendChild(carButton);
+Group") {
+                let carButton = 
 
-                // Hyderabad Update Button with "Online" Text
-                let hyderabadUpdateButton = document.createElement("button");
-                hyderabadUpdateButton.className = "button dropdown-item";
-                hyderabadUpdateButton.innerHTML = "Hyderabad Update <span class='online-status'>Online</span>";
-                hyderabadUpdateButton.onclick = function() {
-                    window.location.href = "https://chat.whatsapp.com/FiJu2KPhmSM4qOayvz87sJ";
+document.createElement("button");
+                carButton.className = "button 
+
+dropdown-item";
+                carButton.innerHTML = "Cars 
+
+Hyderabad <span class='online-
+
+status'>Online</span>";
+                carButton.onclick = function
+
+() {
+                    window.location.href = 
+
+"https://chat.whatsapp.com/HZXBdKnRMq48HXh80v
+
+esgw";
                 };
-                dropdownButtons.appendChild(hyderabadUpdateButton);
+                dropdownButtons.appendChild
+
+(carButton);
+                let hyderabadUpdateButton = 
+
+document.createElement("button");
+                
+
+hyderabadUpdateButton.className = "button 
+
+dropdown-item";
+                
+
+hyderabadUpdateButton.innerHTML = "Hyderabad 
+
+Update <span class='online-
+
+status'>Online</span>";
+                hyderabadUpdateButton.onclick 
+
+= function() {
+                    window.location.href = 
+
+"https://chat.whatsapp.com/FiJu2KPhmSM4qOayvz
+
+87sJ";
+                };
+                dropdownButtons.appendChild
+
+(hyderabadUpdateButton);
             }
-
             for (let i = 1; i <= 30; i++) {
-                let button = document.createElement("button");
-                button.className = "button dropdown-item";
-                button.textContent = category + " " + i;
+                let button = 
+
+document.createElement("button");
+                button.className = "button 
+
+dropdown-item";
+                button.textContent = category 
+
++ " " + i;
                 button.onclick = function() {
                     highlightItem(this);
                 };
-                dropdownButtons.appendChild(button);
+                dropdownButtons.appendChild
+
+(button);
             }
         }
-
         function goBack() {
-            document.getElementById("main-container").style.display = "flex";
-            document.getElementById("dropdown").style.display = "none";
-        }
+            document.getElementById("main-
 
+container").style.display = "flex";
+            document.getElementById
+
+("dropdown").style.display = "none";
+        }
         function filterButtons() {
-            let searchInput = document.getElementById("search-box").value.toLowerCase();
-            let buttons = document.querySelectorAll(".dropdown-item");
+            let searchInput = 
 
+document.getElementById("search-
+
+box").value.toLowerCase();
+            let buttons = 
+
+document.querySelectorAll(".dropdown-item");
             buttons.forEach(button => {
-                button.style.display = button.textContent.toLowerCase().includes(searchInput) ? "block" : "none";
-            });
-        }
+                button.style.display = 
 
-        function highlightItem(button) {
-            let buttons = document.querySelectorAll(".dropdown-item");
-            buttons.forEach(btn => btn.classList.remove("highlight"));
-            button.classList.add("highlight");
+button.textContent.toLowerCase().includes
+
+(searchInput) ? "block" : "none";
+            });
         }
     </script>
 </body>
