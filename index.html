@@ -49,9 +49,7 @@ scale=1.0">
             max-width: 400px;
         }
         .button {
-            background: linear-gradient
-
-(145deg, #1e3c72, #2a5298);
+            background: #1e3c72;
             color: white;
             border: none;
             padding: 15px;
@@ -61,25 +59,21 @@ scale=1.0">
             font-size: 16px;
             font-weight: bold;
             text-align: center;
-            box-shadow: 5px 5px 10px rgba(0, 
-
-0, 0, 0.3),
-                        inset 2px 2px 5px 
-
-rgba(255, 255, 255, 0.2);
-            transition: all 0.2s ease-in-out;
             width: 100%;
+            box-shadow: 4px 4px 6px rgba(0, 
+
+0, 0, 0.3), inset -2px -2px 4px rgba(255, 
+
+255, 255, 0.2);
+            transition: all 0.2s ease-in-out;
         }
         .button:hover {
-            background: linear-gradient
+            background: #163b70;
+            box-shadow: 2px 2px 6px rgba(0, 
 
-(145deg, #2a5298, #1e3c72);
-            box-shadow: 3px 3px 8px rgba(0, 
+0, 0, 0.4), inset -2px -2px 4px rgba(255, 
 
-0, 0, 0.5),
-                        inset -2px -2px 5px 
-
-rgba(255, 255, 255, 0.2);
+255, 255, 0.3);
         }
         .dropdown {
             display: none;
@@ -118,6 +112,12 @@ rgba(255, 255, 255, 0.2);
             border-radius: 5px;
             cursor: pointer;
             font-size: 14px;
+        }
+        .online-status {
+            font-size: 14px;
+            font-weight: bold;
+            margin-left: 5px;
+            color: blue;
         }
     </style>
 </head>
@@ -220,34 +220,6 @@ esgw";
                 dropdownButtons.appendChild
 
 (carButton);
-
-                let hyderabadUpdateButton = 
-
-document.createElement("button");
-                
-
-hyderabadUpdateButton.className = "button 
-
-dropdown-item";
-                
-
-hyderabadUpdateButton.innerHTML = "Hyderabad 
-
-Update <span class='online-
-
-status'>Online</span>";
-                hyderabadUpdateButton.onclick 
-
-= function() {
-                    window.location.href = 
-
-"https://chat.whatsapp.com/FiJu2KPhmSM4qOayvz
-
-87sJ";
-                };
-                dropdownButtons.appendChild
-
-(hyderabadUpdateButton);
             }
 
             for (let i = 1; i <= 30; i++) {
