@@ -96,6 +96,12 @@
             cursor: pointer;
             font-size: 14px;
         }
+        .online-status {
+            font-size: 14px;
+            font-weight: bold;
+            margin-left: 5px;
+            color: blue;
+        }
     </style>
 </head>
 <body>
@@ -128,13 +134,23 @@
             dropdownButtons.innerHTML = "";
 
             if (category === "WhatsApp Group") {
+                // Cars Hyderabad Button with "Online" Text
                 let carButton = document.createElement("button");
                 carButton.className = "button dropdown-item";
-                carButton.textContent = "Cars Hyderabad";
+                carButton.innerHTML = "Cars Hyderabad <span class='online-status'>Online</span>";
                 carButton.onclick = function() {
                     window.location.href = "https://chat.whatsapp.com/HZXBdKnRMq48HXh80vesgw";
                 };
                 dropdownButtons.appendChild(carButton);
+
+                // Hyderabad Update Button with "Online" Text
+                let hyderabadUpdateButton = document.createElement("button");
+                hyderabadUpdateButton.className = "button dropdown-item";
+                hyderabadUpdateButton.innerHTML = "Hyderabad Update <span class='online-status'>Online</span>";
+                hyderabadUpdateButton.onclick = function() {
+                    window.location.href = "https://chat.whatsapp.com/FiJu2KPhmSM4qOayvz87sJ";
+                };
+                dropdownButtons.appendChild(hyderabadUpdateButton);
             }
 
             for (let i = 1; i <= 30; i++) {
